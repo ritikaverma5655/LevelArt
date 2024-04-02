@@ -12,7 +12,7 @@ import Header from './src/screen/Header';
 import SearchScreen from './src/screen/Search';
 import NotificationScreen from './src/screen/Notification';
 import ProfileScreen from './src/screen/Profile';
-
+import PostScreen from './src/screen/Post';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -49,6 +49,15 @@ function TabNavigator() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="search" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Add Post"
+        component={PostScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="add" size={size} color={color} />
           ),
         }}
       />
